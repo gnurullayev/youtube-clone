@@ -1,0 +1,20 @@
+import React from 'react'
+import {Routes,Route,Navigate} from "react-router-dom"
+import Home from '../pages/Home'
+import Subscription from '../pages/Subscription'
+import SubscribeWatch from '../pages/SubscribeWatch'
+
+const PrivetRoute = () => {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path='/watch/subscribtions' element = {<SubscribeWatch/>}/>
+        <Route path='/chanel/:id' element = {<Subscription/>}/>
+        <Route path="*" element={<Navigate to="/"/>}/>
+      </Routes>   
+    </>
+  )
+}
+
+export default PrivetRoute

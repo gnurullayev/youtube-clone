@@ -1,0 +1,87 @@
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    min-height: 64px;
+    padding: 10px 0;
+    backdrop-filter: blur(10px);
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header_start {
+    width: 289px;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    width: 40px;
+    height: 30px;
+    font-size: 50px;
+    margin-right: 28px;
+    color: #fff;
+}
+
+.header__midle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header_label {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width:600px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--color-bg2);
+    border-radius: 22px;
+}
+
+.header_input {
+    color: var(--color-text-secondary);
+}
+
+.header_inputIcon{
+    color: #fff;
+    font-size: 25px;
+}
+
+.leader__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__item {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.header__item:hover {
+    background-color: var(--color-bg2);
+}
+
+.header__item:last-child:hover {
+    background-color: var(--color-bg);
+}
+
+.active {
+    color: var(--color-text-secondary);
+}
