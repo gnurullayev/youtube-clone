@@ -1,58 +1,46 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import {useSelector,useDispatch} from "react-redux"
+import { fetchVideos} from "../redux/reduser"
 import "./home.css"
-
-import img1 from "../assets/card-img1.png"
-import img2 from "../assets/card-img2.png"
-import img3 from "../assets/card-img3.png"
-import img4 from "../assets/card-img4.png"
+import { Link } from 'react-router-dom'
 
 const Home = () => {
+  const dispatch = useDispatch()
+  const {videos} = useSelector(state => state.videoReduser)
+
+  useEffect(() => {
+    dispatch(fetchVideos())
+  },[])
+
+  const chanelHandler = (id) => {
+    localStorage.setItem("chanelId", id)
+  }
+
   return (
    <div className="home">
-      <ul className= 'row'>
-        <li className='col-md-3'>
-          <div className="card">
-            <img className="card-img"  src= {img1} alt=""/>
-            <div className="card-body">
-              <h3 className="card-title">A Brief History Of Creation</h3>
-              <p>80k views  ·  3 days ago</p>
-              <p>Dollie Blair</p>
-            </div>
-          </div>
-        </li>
+      <ul className= 'row gy-3 home-list'>
+        {videos.map(video => (
+          <li key={video.id.videoId} className='col-md-3' onClick={() => chanelHandler(video.snippet.channelId)}>
+            <Link to={`/watch-video/${video.id.videoId}`}>
+              <div className="card cart home-card">
+                <img className="card-im rounded-0"  src= {video.snippet.thumbnails.high.url} alt=""/>
 
-        <li className='col-md-3'>
-          <div className="card">
-            <img className="card-img"  src= {img1} alt=""/>
-            <div className="card-body">
-              <h3 className="card-title">A Brief History Of Creation</h3>
-              <p>80k views  ·  3 days ago</p>
-              <p>Dollie Blair</p>
-            </div>
-          </div>
-        </li>
-
-        <li className='col-md-3'>
-          <div className="card">
-            <img className="card-img"  src= {img1} alt=""/>
-            <div className="card-body">
-              <h3 className="card-title">A Brief History Of Creation</h3>
-              <p>80k views  ·  3 days ago</p>
-              <p>Dollie Blair</p>
-            </div>
-          </div>
-        </li>
-
-        <li className='col-md-3'>
-          <div className="card">
-            <img className="card-img"  src= {img1} alt=""/>
-            <div className="card-body">
-              <h3 className="card-title">A Brief History Of Creation</h3>
-              <p>80k views  ·  3 days ago</p>
-              <p>Dollie Blair</p>
-            </div>
-          </div>
-        </li>
+                <div className="card-body">
+                  <h4 
+                  className="card-title home-card__title">
+                    {video.snippet.title.length > 25 ? video.snippet.title.slice(0,20) + "..." : video.snippet.title}
+                  </h4>
+                  <p 
+                  className='home-card__time'>
+                    97K views 22 hours ago
+                    {/* {(video.viewCount*1) >= 1000 ? (video.viewCount.slice(0,video.viewCount.length - 3) + "k"): video.viewCount} views   ·  {video.publishedTimeText} */}
+                  </p>
+                  <Link to="/" className='home-card__author'>{video.snippet.channelTitle}</Link>
+                </div>
+              </div>
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   )

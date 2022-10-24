@@ -1,0 +1,19 @@
+
+.watch__right-img {
+    width: 168px;
+    height: 94px;
+    border: 0 !important;
+}
+
+.card-title1 {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-text-white);
+    font-weight: 600;
+}
+
+.card-text1 {
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 500; 
+}

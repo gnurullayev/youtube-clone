@@ -13,12 +13,20 @@
 
 ul {
   margin: 0 !important;
+  padding-left: 0 !important;
 }
+
+
 a {
   text-decoration: none !important;
 }
+
 p{
   margin-bottom: 0 !important;
+}
+
+span {
+  display: inline-block;
 }
 
 :root {
@@ -68,7 +76,16 @@ body {
 }
 
 .main {
+  width: 100%;
   margin-left: 255px;
+}
+
+.main-active {
+  margin-left: 0px;
+}
+
+.main-right {
+  margin-left: 0 !important;
 }
 
 

@@ -3,6 +3,7 @@ import {Routes,Route,Navigate} from "react-router-dom"
 import Home from '../pages/Home'
 import Subscription from '../pages/Subscription'
 import SubscribeWatch from '../pages/SubscribeWatch'
+import Watch from '../pages/Watch'
 
 const PrivetRoute = () => {
   return (
@@ -11,6 +12,7 @@ const PrivetRoute = () => {
         <Route path="/" element={<Home/>}/>
         <Route path='/watch/subscribtions' element = {<SubscribeWatch/>}/>
         <Route path='/chanel/:id' element = {<Subscription/>}/>
+        <Route path='/watch-video/:id' element = {<Watch/>}/>
         <Route path="*" element={<Navigate to="/"/>}/>
       </Routes>   
     </>

@@ -1,3 +1,31 @@
-.home {
-    border: 1px solid red;
+.cart,
+.card {
+    background-color: transparent !important; 
+    border: 0 !important;
+    transition: var(--transition);
+}
+
+.cart:hover {
+    z-index: 1;
+    background-color: var(--color-bg2) !important;
+    border: 1px !important;
+    transform: scale(1.1)
+}
+
+.card-img {
+    border-radius: 0 !important;
+} 
+
+.home-card__title {
+    margin-bottom: 5px;
+    font-size: var(--fs-sm);
+    color: var(--color-text-white);
+}
+
+.home-card__time,
+.home-card__author {
+    margin-bottom: 3px !important;
+    font-size: var(--fs-xs);
+    line-height: var(--lh-xs);
+    color: var(--color-text-secondary2);
 }
