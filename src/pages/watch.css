@@ -17,8 +17,8 @@
 .watch_left-inner-title {
     margin-top: 10px;
     margin-bottom: 15px;
-    font-size: var(--fs-lg);
-    line-height: var(--lh-lg);
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
     color: var(--color-text-white);
 }
 
@@ -39,7 +39,7 @@
 .left-settings__title {
     margin-bottom: 5px;
     color: var(--color-text-white);
-    font-size: var(--fs-md);
+    font-size: var(--fs-sm);
     line-height: var(--lh-md);
 }
 
@@ -59,17 +59,47 @@
     margin-left: 15px !important;
 } 
 
-.left-settings {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 20px;
+.left-settings__item1 {
+    width: 120px;
+    display: flex;
     background-color: var(--color-bg2);
+    border-radius: 20px;
+}
+
+.left-settings,
+.left-settings-btn {
+    display: inline-block;
+    padding: 5px 0px;
     color: var(--color-text-white);
     transition: var(--transition);
 }
+.left-settings-like {
+    width: 70px;
+    border-end-start-radius: 20px;
+    border-top-left-radius: 20px;
+}
 
-.left-settings:hover {
+.left-settings-dislike {
+    width: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.left-settings-icon {
+    width: 25px;
+    height: 25px;
+    transition: var(--transition);
+}
+
+.left-settings:hover,
+.left-settings-btn:hover {
     background-color:rgba(235, 235, 235, 0.4);
+}
+
+.left-settings-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .comment {

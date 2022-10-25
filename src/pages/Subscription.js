@@ -1,8 +1,11 @@
 import React from 'react'
+import Comments from '../components/Comments'
 
 const Subscription = () => {
   return (
-    <div>Subscription</div>
+    <>
+      subscription
+    </>
   )
 }
 

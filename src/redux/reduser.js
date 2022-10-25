@@ -25,24 +25,6 @@ export const fetchVideos = createAsyncThunk(
     }
 )
 
-export const fetchNextVideos = createAsyncThunk(
-    "nextVideos/fetchingVideos",
-    async (id) => {
-        const  {request1} = useHttp() 
-        const data = await request1(id)
-        return data
-    }
-)
-
-export const fetchComments = createAsyncThunk(
-    "videoComments/fetchingVideo",
-    async (id) => {
-        const  {request3} = useHttp() 
-        const res = await request3(id)
-        return res
-    }
-)
-
 export const fetchVideoDetails = createAsyncThunk(
     "videoDetals/fetchingVideo",
     async (id) => {
@@ -66,7 +48,7 @@ export const fetchNextVideo = createAsyncThunk(
     async (id) => {
         const {request4} = useHttp()
         const res = await request4(id)
-        return res.items
+        return res
     }
 )
 
@@ -123,21 +105,12 @@ const fetchingSlice = createSlice({
                 state.chanelLoading = false;
                 state.error = true;
             })
-            .addCase(fetchComments.pending, (state) => {
-                state.commentLoading = true
-            })
-            .addCase(fetchComments.fulfilled, (state, action) => {
-                state.comments = action.payload;
-                state.commentLoading = false;
-            })
-            .addCase(fetchComments.rejected, (state) => {
-                state.commentLoading = false;
-            })
             .addCase(fetchNextVideo.pending, (state) => {
                 state.nextVideoLoading = true
             })
             .addCase(fetchNextVideo.fulfilled, (state, action) => {
-                state.comments = action.payload;
+                console.log(action.payload);
+                state.nextVideos = action.payload;
                 state.nextVideoLoading = false;
             })
             .addCase(fetchNextVideo.rejected, (state) => {

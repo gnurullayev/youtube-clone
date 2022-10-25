@@ -1,0 +1,37 @@
+.searchVideos {
+    padding: 15px 20px;
+}
+
+.searchVideos-title {
+    margin-bottom: 20px;
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+    color: var(--color-text-white);
+}
+
+.card-title1 {
+    margin-bottom: 1px;
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+    color: var(--color-text-white);
+}
+
+.text-muted1 {
+    font-size: var(--fs-xs) !important;
+    line-height: var(--lh-sm) !important;
+    font-weight: 600 !important;
+    color: var(--color-text-secondary2);
+}
+
+.search-channel-title,
+.card-desc {
+    font-size: var(--fs-xs);
+    line-height: var(--lh-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary2);
+}
+
+.card-desc {
+    font-weight: 400;
+    color: var(--color-text-secondary3);
+}

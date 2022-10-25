@@ -35,6 +35,12 @@
     width: 100%;
 }
 
+.header_form{
+    display: block;
+    width: 100%;
+    max-width:600px;
+}
+
 .header_label {
     display: flex;
     justify-content: space-between;
@@ -85,4 +91,11 @@
 
 .active {
     color: var(--color-text-secondary);
+}
+
+.header_search {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
 }

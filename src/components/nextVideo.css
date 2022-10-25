@@ -1,11 +1,13 @@
 
 .watch__right-img {
-    width: 168px;
+    width: 200px;
     height: 94px;
+    object-fit: contain;
     border: 0 !important;
 }
 
-.card-title1 {
+.next-vide-title {
+    margin-bottom: 1px;
     font-size: 14px;
     line-height: 18px;
     color: var(--color-text-white);

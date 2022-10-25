@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import {useSelector,useDispatch} from "react-redux"
-import { fetchVideos} from "../redux/reduser"
+import {fetchNextVideo, fetchVideos} from "../redux/reduser"
 import "./home.css"
 import { Link } from 'react-router-dom'
 
@@ -12,15 +12,17 @@ const Home = () => {
     dispatch(fetchVideos())
   },[])
 
-  const chanelHandler = (id) => {
-    localStorage.setItem("chanelId", id)
+  const chanelHandler = (channelId,videoId) => {
+    dispatch(fetchNextVideo(videoId))
+    // dispatch(commentsFetching(videoId))
+    localStorage.setItem("chanelId", channelId)
   }
 
   return (
    <div className="home">
       <ul className= 'row gy-3 home-list'>
         {videos.map(video => (
-          <li key={video.id.videoId} className='col-md-3' onClick={() => chanelHandler(video.snippet.channelId)}>
+          <li key={video.id.videoId} className='col-md-3' onClick={() => chanelHandler(video.snippet.channelId,video.id.videoId)}>
             <Link to={`/watch-video/${video.id.videoId}`}>
               <div className="card cart home-card">
                 <img className="card-im rounded-0"  src= {video.snippet.thumbnails.high.url} alt=""/>
