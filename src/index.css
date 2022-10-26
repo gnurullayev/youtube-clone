@@ -32,6 +32,8 @@ span {
 :root {
   --color-bg: #16161d;
   --color-bg2: rgba(235, 235, 235, 0.24);
+  --color-bg3: #25252b;
+  --color-bg4: #1c1c20;
   --color-icon: rgba(0, 0, 0, 0.137);
   --color-text-secondary: rgba(255, 255, 255, 0.5);
   --color-text-secondary2: rgba(255, 255, 255, 0.4);
@@ -77,7 +79,7 @@ body {
 
 .main {
   width: 100%;
-  margin-left: 255px;
+  margin-left: 251px;
 }
 
 .main-active {

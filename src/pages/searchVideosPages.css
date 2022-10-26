@@ -9,6 +9,12 @@
     color: var(--color-text-white);
 }
 
+.search-channel-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
 .card-title1 {
     margin-bottom: 1px;
     font-size: var(--fs-md);

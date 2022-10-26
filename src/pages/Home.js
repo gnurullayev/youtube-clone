@@ -37,7 +37,7 @@ const Home = () => {
                     97K views 22 hours ago
                     {/* {(video.viewCount*1) >= 1000 ? (video.viewCount.slice(0,video.viewCount.length - 3) + "k"): video.viewCount} views   ·  {video.publishedTimeText} */}
                   </p>
-                  <Link to="/" className='home-card__author'>{video.snippet.channelTitle}</Link>
+                  <Link to={`/chanel/${video.snippet.channelId}`} className='home-card__author'>{video.snippet.channelTitle}</Link>
                 </div>
               </div>
             </Link>

@@ -1,0 +1,129 @@
+.subscription{
+    position: relative;
+    /* z-index: 1; */
+    width: 100%;
+}
+
+.suubscription-bg-img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+   
+}
+
+.subscription__img {
+    width: 100%;
+}
+
+.subscription__profile {
+    z-index: 100;
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+
+    padding-top: 150px;
+}
+
+.subscription-settings {
+    position: sticky;
+    top: -35px;
+    padding: 0 20px;
+    padding-top: 15px;   
+    background-color: var(--color-bg4);
+}
+
+.subscription-settings-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.subscription__list1 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.subscription-profile__img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.subscription__title {
+    margin-bottom: 5px;
+    color: var(--color-text-white);
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+}
+
+.subscription__subtitle {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: var(--lh-md);
+    font-weight: 400 !important;
+}
+
+.btn {
+    border-radius: 20px !important;
+    font-weight: 700;
+}
+
+.subscription-subscribe {
+    display: inline-block;
+    margin-left: 15px !important;
+} 
+
+.subscription__item1 {
+    width: 120px;
+    display: flex;
+    background-color: var(--color-bg2);
+    border-radius: 20px;
+}
+
+.subscription-btn {
+    display: inline-block;
+    padding: 5px 0px;
+    color: var(--color-text-white);
+    transition: var(--transition);
+}
+
+.subscription-icon {
+    width: 25px;
+    height: 25px;
+    transition: var(--transition);
+}
+
+.subscription-btn:hover {
+    background-color:rgba(235, 235, 235, 0.4);
+}
+
+.subscription-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.subscription_navigate-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription_navigate-item {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.subscription_navigate-link {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--color-text-white);
+    transition: var(--transition);
+}
+
+
+/* .subscription_navigate-item {
+    padding: ;
+} */

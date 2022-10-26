@@ -68,6 +68,9 @@ const fetchingSlice = createSlice({
                 
         //         ))
         // },
+        newNextVideos: (state,action) => {
+            state.nextVideoLoading = false
+        }
     },
 
     extraReducers: builder => {
@@ -123,5 +126,5 @@ const fetchingSlice = createSlice({
 
 
 const {actions,reducer} = fetchingSlice
-export const {isActiveSidebar,activeSidebar,replyComment,chanelId} = actions
+export const {isActiveSidebar,activeSidebar,newNextVideos} = actions
 export default reducer

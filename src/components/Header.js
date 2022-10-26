@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from "./header.module.css"
 import { HiMenu } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
@@ -11,10 +11,10 @@ import logo from "../assets/Black.svg"
 import { useDispatch} from 'react-redux';
 import { activeSidebar } from '../redux/reduser';
 import { searchVideosFetching } from '../redux/reducer2';
-import { Link, useLocation, useNavigate,  } from 'react-router-dom';
+import { Link, useNavigate,  } from 'react-router-dom';
 
 const Header = () => {
-  const [value,setValue] = useState("")
+  const [value,setValue] = useState(localStorage.getItem("searchVideoTitle"))
   const dispatch = useDispatch();
   const navigate = useNavigate()
   // console.log(navigate);
@@ -23,10 +23,13 @@ const Header = () => {
     dispatch(activeSidebar())
   }
 
+  useEffect(()=> {
+    dispatch(searchVideosFetching(localStorage.getItem("searchVideoTitle").length === 0 ? value : localStorage.getItem("searchVideoTitle")))
+  },[])
+
   const searchHandler = (e) => {
     e.preventDefault()
     dispatch(searchVideosFetching(value))
-    setValue("")
     navigate("/search-video")
     localStorage.setItem("searchVideoTitle", value)
   }

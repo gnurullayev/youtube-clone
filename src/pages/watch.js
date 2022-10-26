@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import { useDispatch, useSelector} from 'react-redux';
 import { useParams } from 'react-router-dom';
 import NextVideo from '../components/NextVideo';
-import { fetchChanelDetails,fetchVideoDetails, isActiveSidebar} from "../redux/reduser"
+import { fetchChanelDetails,fetchVideoDetails, isActiveSidebar,} from "../redux/reduser"
 import {AiOutlineLike} from "react-icons/ai"
 import {AiOutlineDislike} from "react-icons/ai"
 import {RiShareForwardLine} from "react-icons/ri"
@@ -11,7 +11,7 @@ import "./watch.css"
 
 const Watch = () => {
   const [channelId, setCHanelId] = useState(localStorage.getItem("chanelId"))
-  const {video,chanelDetails,videoLoading,chanelLoading} = useSelector(state => state.videoReduser)
+  const {video,chanelDetails,videoLoading,chanelLoading,} = useSelector(state => state.videoReduser)
 
   const {id} = useParams()
   const dispatch = useDispatch();
@@ -24,6 +24,11 @@ const Watch = () => {
   useEffect(() => {
     dispatch(fetchChanelDetails(channelId))
   }, [channelId,dispatch]);
+
+  // useEffect(() => {
+  //   dispatch(newNextVideos(nextVideos))
+  //   localStorage.setItem("localNextVideos", nextVideos)
+  // }, []);
 
   // console.log(chanelD  etails);
 

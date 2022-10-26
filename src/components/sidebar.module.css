@@ -8,8 +8,8 @@
     height: 100%;
     display: none;
     flex-direction: column;
-    padding-top: 64px;
-    background-color: var(--color-bg);
+    padding-top: 54px;
+    background-color: var(--color-bg3);
 }
 
 .sidebar_active {
@@ -18,7 +18,7 @@
 
 .sidebar__box {
     overflow: auto;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .sidebar__boxInner,
@@ -68,9 +68,9 @@
 .sidebar__linkTop {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
-    padding: 15px 0;
+    padding: 8px 0;
     color: var(--color-text-secondary);
     transition: var(--transition);
 }
