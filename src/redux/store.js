@@ -6,5 +6,5 @@ import commentReduser from "./reducer2"
 
 export const store = configureStore({
     reducer: {videoReduser, commentReduser},
-    devTools: process.env.NODE_ENV !== 'production',
+    devTools: true,
 })
